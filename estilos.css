@@ -1,0 +1,123 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background-color: black;
+  display: grid;
+  place-items: center;
+}
+
+.Calculadora {
+  background-color: rgb(117, 121, 120);
+  color: rgb(10, 10, 10);
+  width: 450px;
+  max-width: 100%;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); /*5 botones en cada columna*/
+  gap: 0.5rem;
+}
+
+.pantalla {
+  grid-column: 1 / -1;
+  background-color: rgb(138, 189, 180);
+  padding: 1.5rem;
+  font-size: 3rem;
+  text-align: right;
+  border-radius: 0.5rem;
+  margin-bottom: 1rem;
+  font-family: monospace;
+  font-weight: 600;
+}
+.btn {
+  background-color: #9b9ce0;
+  color: black;
+  font-size: 1.5rem;
+  font-weight: bold;
+  border: 1px;
+  padding: 1.5rem 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #797dbe;
+}
+
+.btn {
+  animation: none; /* Sin animación inicial */
+  transition: transform 0.2s ease;
+}
+
+.btn:active {
+  animation: bounce 0.2s; /* Aplicar la animación al hacer click */
+}
+
+@keyframes bounce {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+#cero {
+  grid-column: span 2;
+}
+
+#MC,
+#MR,
+#Mplus,
+#Mminus,
+#div,
+#raiz,
+#mult,
+#mod,
+#resta,
+#suma,
+#igual {
+  background-color: rgb(96, 214, 96);
+}
+
+#reciproco {
+  background-color: rgb(243, 232, 83);
+}
+
+#C {
+  background-color: coral;
+}
+
+#MC:hover,
+#MR:hover,
+#Mplus:hover,
+#Mminus:hover,
+#div:hover,
+#raiz:hover,
+#mult:hover,
+#mod:hover,
+#resta:hover,
+#suma:hover,
+#igual:hover {
+  background-color: rgb(58, 175, 58);
+}
+
+#reciproco:hover {
+  background-color: rgb(201, 219, 32);
+}
+
+#C:hover {
+  background-color: rgb(196, 110, 30);
+}
